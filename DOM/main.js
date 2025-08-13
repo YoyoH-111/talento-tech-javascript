@@ -26,4 +26,15 @@ boton2.innerText = "no peligro";
 document.body.appendChild(boton);
 document.body.appendChild(boton2);
 
+// aprendiendo a hacer eventos en javascript con botones
+// en la funcion con flechas, puedo crear funciones dentro de las funciones
+boton.addEventListener("click",()=>{
+    peligro=false;
+    recordando=spiderman(peligro);
+    window.location.href="index.html";  //vamos a inyectar un html,dentro de este html para que pasen cosas dentro de la pagina sin abrir otra ventana
+    document.body.innerHTML=`
+    <h1>${recordando} </h1>
+    <button id ='boton2' ><a href='index.html'>volver</a></button>
+    `;
 
+});
